@@ -1,0 +1,1943 @@
+<?xml version='1.0' encoding='ASCII'?>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <vendor>Freescale Semiconductor, Inc.</vendor>
+  <vendorID>Freescale</vendorID>
+  <name>E200Z0h</name>
+  <series>Qorivva</series>
+  <version>1.6</version>
+  <description>E200Z0h Core</description>
+  <licenseText>Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+ o Redistributions of source code must retain the above copyright notice, this list
+   of conditions and the following disclaimer.
+ o Redistributions in binary form must reproduce the above copyright notice, this
+   list of conditions and the following disclaimer in the documentation and/or
+   other materials provided with the distribution.
+ o Neither the name of Freescale Semiconductor, Inc. nor the names of its
+   contributors may be used to endorse or promote products derived from this
+   software without specific prior written permission.
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot; AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</licenseText>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <peripherals>  
+  	
+    <peripheral>
+      <name>SPR_General</name>
+      <description>SPR General</description>
+      <prependToName>SPR_General_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>SPRG0</name>
+          <description>SPR 272</description>
+          <addressOffset>1013</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>SPRG1</name>
+          <description>SPR 273</description>
+          <addressOffset>1014</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    
+    <peripheral>
+      <name>Processor_Control_Registers</name>
+      <description>Processor Control Registers</description>
+      <prependToName>Processor_Control_Registers_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>PIR</name>
+          <description>SPR 286</description>
+          <addressOffset>1023</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CPUID</name>
+              <description>Processor ID.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>                                        
+        </register>
+        <register>
+          <name>PVR</name>
+          <description>SPR 287</description>
+          <addressOffset>1024</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+          <resetValue>0</resetValue>          
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>MBG_ID</name>
+              <description>These bits identify the Freescale Business Group responsible for a particular mask set.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MAJ_REV</name>
+              <description>Major revision number</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MIN_REV</name>
+              <description>Minor revision number</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VERSION</name>
+              <description>Processor version</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TYPE</name>
+              <description>Processor type</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MANUFID</name>
+              <description>Manufacturer ID. Freescale is 4`b1000</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>                    
+        </register>
+        <register>
+          <name>HID0</name>
+          <description>SPR 1008</description>
+          <addressOffset>1091</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>DAPUEN</name>
+              <description>Debug APU enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Debug APU enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Debug APU disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>MCCLRDE</name>
+              <description>Machine Check Interrupt Clears MSRDE</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>MSRDE cleared by Machine Check interrupt</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>MSRDE unaffected by Machine Check interrupt</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>CICLRDE</name>
+              <description>Critical Interrupt Clears MSRDE</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>MSRDE cleared by Critical class interrupt</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>MSRDE unaffected by Critical class interrupt</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>DCLRCE</name>
+              <description>Debug Interrupt Clears MSRCE</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>MSRCE cleared by Debug Interrupt</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>MSRCE unaffected by Debug Interrupt</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>DCLREE</name>
+              <description>Debug Interrupt Clears MSREE</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>MSREE cleared by Debug Interrupt</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>MSREEunaffected by Debug Interrupt</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>SEL_TBCLK</name>
+              <description>Select TimeBase Clock</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>TimeBase is based on p_tbclk input</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>TimeBase is based on processor clock</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>TBEN</name>
+              <description>TimeBase Enable</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>TimeBase is enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>TimeBase is disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	          	          	
+            <field>
+              <name>NHR</name>
+              <description>Not hardware reset</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Indicates to a reset exception handler that no reset occurred if software had previously set this bit</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Indicates to a reset exception handler that a reset occurred if software had previously set this bit</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	          	          	
+            <field>
+              <name>ICR</name>
+              <description>Interrupt Inputs Clear Reservation</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>External Input, Critical Input, and Non-Maskable Interrupts clear an outstanding reservation</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>External Input, Critical Input, and Non-Maskable Interrupts do not affect reservation status</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	          	          	          	
+            <field>
+              <name>SLEEP</name>
+              <description>Configure for Sleep power management mode</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Sleep mode is enabled.</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Sleep mode is disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	
+            <field>
+              <name>NAP</name>
+              <description>Configure for Nap power management mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Nap mode is enabled.</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Nap mode is disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DOZE</name>
+              <description>Configure for Doze power management mode</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Doze mode is enabled.</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Doze mode is disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>          	          	
+            <field>
+              <name>EMCP</name>
+              <description>Enable machine check pin.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>pin is enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>pin is disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>                    
+        </register>
+        <register>
+          <name>HID1</name>
+          <description>SPR 1009</description>
+          <addressOffset>1092</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>ATS</name>
+              <description>Atomic status (read-only)</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>          	          	
+            <field>
+              <name>SYSCTL</name>
+              <description>System Control</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>            
+          </fields>                                        
+        </register>
+        <register>
+          <name>SVR</name>
+          <description>SPR 1023</description>
+          <addressOffset>1099</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+        
+    <peripheral>
+      <name>Exception_Handling_Control_Registers</name>
+      <description>Exception Handling/Control Registers</description>
+      <prependToName>Exception_Handling_Control_Registers_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>SRR0</name>
+          <description>SPR 26</description>
+          <addressOffset>1001</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>SRR1</name>
+          <description>SPR 27</description>
+          <addressOffset>1002</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>CSRR0</name>
+          <description>SPR 58</description>
+          <addressOffset>1005</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>CSRR1</name>
+          <description>SPR 59</description>
+          <addressOffset>1006</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>DEAR</name>
+          <description>SPR 61</description>
+          <addressOffset>1007</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>ESR</name>
+          <description>SPR 62</description>
+          <addressOffset>1008</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>XTE</name>
+              <description>External Termination Error (Precise)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VLEMI</name>
+              <description>VLE Mode Instruction</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EFP</name>
+              <description>Embedded Floating-point APU Operation</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PIE</name>
+              <description>Program Imprecise exception (Reserved)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BO</name>
+              <description>Byte Ordering exception</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUO</name>
+              <description>Unimplemented Operation exception</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AP</name>
+              <description>Auxiliary Processor operation</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ST</name>
+              <description>Store operation</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PTR</name>
+              <description>Trap exception</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PPR</name>
+              <description>Privileged Instruction exception</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PIL</name>
+              <description>Illegal Instruction exception</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>                                                                                                                                                                                  	          	          	          	          	          	          	          	          	
+          </fields>                    
+        </register>
+        <register>
+          <name>IVPR</name>
+          <description>SPR 63</description>
+          <addressOffset>1009</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>Vec_Base</name>
+              <description>Vector Base</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>                              
+        </register>
+        <register>
+          <name>MCSR</name>
+          <description>SPR 572</description>
+          <addressOffset>1075</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BUS_WRERR</name>
+              <description>Write bus error on store or cache line push</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BUS_DRERR</name>
+              <description>Read bus error on data load or linefill</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BUS_IRERR</name>
+              <description>Read bus error on Instruction fetch or linefill</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NMI</name>
+              <description>NMI input pin</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EXCP_ERR</name>
+              <description>Bus Error on first instruction fetch for an exception handler</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCP</name>
+              <description>Machine check input pin</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>                                                                                                                                                                                                                                                
+          </fields>                    
+        </register>
+        <register>
+          <name>DSRR0</name>
+          <description>SPR 574</description>
+          <addressOffset>1077</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>DSRR1</name>
+          <description>SPR 575</description>
+          <addressOffset>1078</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+        
+    <peripheral>
+      <name>BTB</name>
+      <description>Branch Target Buffer Registers</description>
+      <prependToName>BTB_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>BUCSR</name>
+          <description>SPR 1013</description>
+          <addressOffset>1096</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BPEN</name>
+              <description>Branch target buffer prediction enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Branch target buffer prediction enabled (enables BTB to predict branches)</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Branch target buffer prediction disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>                                                          	          	
+            <field>            	
+              <name>BBFI</name>
+              <description>Branch target buffer flash invalidate
+              	           When written to a '1', BBFI flash clears the valid bit of all entries in the branch target buffer; clearing
+                           occurs regardless of the value of the enable bit (BPEN). Note: BBFI is always read as 0</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>          	          	
+          </fields>                                                            
+        </register>
+      </registers>
+    </peripheral>
+              
+    <peripheral>
+      <name>MMU</name>
+      <description>Memory Management Registers</description>
+      <prependToName>MMU_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>PID0</name>
+          <description>SPR 48</description>
+          <addressOffset>1003</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>MMUCFG</name>
+          <description>SPR 1015</description>
+          <addressOffset>1097</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>MAVN</name>
+              <description>MMU Architecture Version Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NTLBS</name>
+              <description>Number of TLBs</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIDSIZE</name>
+              <description>PID Register Size</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NPIDS</name>
+              <description>Number of PID Registers</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>                                                            
+        </register>
+      </registers>
+    </peripheral>
+
+    <peripheral>
+      <name>Cache</name>
+      <description>Cache Registers</description>
+      <prependToName>Cache_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>L1CFG0</name>
+          <description>SPR 515</description>
+          <addressOffset>1056</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+                
+    <peripheral>
+      <name>Debug</name>
+      <description>Debug Registers</description>
+      <prependToName>Debug_</prependToName>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x19c</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DBSR</name>
+          <description>SPR 304</description>
+          <addressOffset>1025</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>VLES</name>
+              <description>VLE Status</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CRET</name>
+              <description>Critical Return Debug Event</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CIRPT</name>
+              <description>Critical Interrupt Taken Debug Event</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DEVT2</name>
+              <description>External Debug Event 2 Debug Event</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DEVT1</name>
+              <description>External Debug Event 1 Debug Event</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RET</name>
+              <description>Return Debug Event</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DAC2W</name>
+              <description>Data Address Compare 2 Write Debug Event</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DAC2R</name>
+              <description>Data Address Compare 2 Read Debug Event</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DAC1W</name>
+              <description>Data Address Compare 1 Write Debug Event</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DAC1R</name>
+              <description>Data Address Compare 1 Read Debug Event</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IAC4</name>
+              <description>Instruction Address Compare 4 Debug Event</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IAC3</name>
+              <description>Instruction Address Compare 3 Debug Event</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IAC2</name>
+              <description>Instruction Address Compare 2 Debug Event</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IAC1</name>
+              <description>Instruction Address Compare 1 Debug Event</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRAP</name>
+              <description>Trap Taken Debug Event</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IRPT</name>
+              <description>Interrupt Taken Debug Event</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRT</name>
+              <description>Branch Taken Debug Event</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ICMP</name>
+              <description>Instruction Complete Debug Event</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MRR</name>
+              <description>Most Recent Reset</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>Reserved</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>Reserved</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>A hard reset occurred because these bits were last cleared by software</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>No reset occurred because these bits were last cleared by software</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                                                        
+            </field>
+            <field>
+              <name>UDE</name>
+              <description>Unconditional Debug Event</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IDE</name>
+              <description>Imprecise Debug Event</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>                                                                                                                                                                                                                                                            
+          </fields>                    
+        </register>
+        <register>
+          <name>DBCR0</name>
+          <description>SPR 308</description>
+          <addressOffset>1026</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CRET</name>
+              <description>Critical Return Debug Event Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>CRET debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>CRET debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>CIRPT</name>
+              <description>Critical Interrupt Taken Debug Event Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>CIRPT debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>CIRPT debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DEVT2</name>
+              <description>External Debug Event 2 Enable</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>DEVT2 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>DEVT2 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DEVT1</name>
+              <description>External Debug Event 1 Enable</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>DEVT1 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>DEVT1 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>RET</name>
+              <description>Return Debug Event Enable</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>RET debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>RET debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC2</name>
+              <description>Data Address Compare 2 Debug Event Enable</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC2 debug events are enabled for load-type or store-type data storage accesses</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC2 debug events are enabled only for load-type data storage accesses</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>DAC2 debug events are enabled only for store-type data storage accesses</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC2 debug events are disabled</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC1</name>
+              <description>Data Address Compare 1 Debug Event Enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC1 debug events are enabled for load-type or store-type data storage accesses</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC1 debug events are enabled only for load-type data storage accesses</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>DAC1 debug events are enabled only for store-type data storage accesses</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC1 debug events are disabled</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC4</name>
+              <description>Instruction Address Compare 4 Debug Event Enable</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>IAC4 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>IAC4 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC3</name>
+              <description>Instruction Address Compare 3 Debug Event Enable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>IAC3 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>IAC3 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC2</name>
+              <description>Instruction Address Compare 2 Debug Event Enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>IAC2 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>IAC2 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC1</name>
+              <description>Instruction Address Compare 1 Debug Event Enable</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>IAC1 debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>IAC1 debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>TRAP</name>
+              <description>Trap Taken Debug Event Enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>TRAP debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>TRAP debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IRPT</name>
+              <description>Interrupt Taken Debug Event Enable</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>IRPT debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>IRPT debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>BRT</name>
+              <description>Branch Taken Debug Event Enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>BRT debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>BRT debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>ICMP</name>
+              <description>Instruction Complete Debug Event Enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>ICMP debug events are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>ICMP debug events are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>RST</name>
+              <description>Reset Control</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>Reserved</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>p_dbrstc[0] pin asserted by Debug Reset Control</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>p_dbrstc[1] pin asserted by Debug Reset Control</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>No function</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IDM</name>
+              <description>Internal Debug Mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>Debug exceptions are enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>Debug exceptions are disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>EDM</name>
+              <description>External Debug Mode. This bit is read-only by software</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>External debug mode enabled</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>External debug mode disabled</description>
+                  <value>#0</value>
+                </enumeratedValue>
+              </enumeratedValues>                            
+            </field>
+          </fields>                                        
+        </register>
+        <register>
+          <name>DBCR1</name>
+          <description>SPR 309</description>
+          <addressOffset>1027</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>IAC34M</name>
+              <description>Instruction Address Compare 3/4 Mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>Exclusive address range compare</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>Inclusive address range compare</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Address bit match</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>Exact address compare</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC4ER</name>
+              <description>Instruction Address Compare 4 Effective/Real Mode</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC4 debug events are based on effective address and can only occur if MSRIS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC4 debug events are based on effective address and can only occur if MSRIS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC4 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC4US</name>
+              <description>Instruction Address Compare 4 User/Supervisor Mode</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC4 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC4 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC4 debug events not affected by MSRPR</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC3ER</name>
+              <description>Instruction Address Compare 3 Effective/Real Mode</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC3 debug events are based on effective address and can only occur if MSRIS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC3 debug events are based on effective address and can only occur if MSRIS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC3 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC3US</name>
+              <description>Instruction Address Compare 3 User/Supervisor Mode</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC3 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC3 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC3 debug events not affected by MSRPR</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC12M</name>
+              <description>Instruction Address Compare 1/2 Mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>Exclusive address range compare</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>Inclusive address range compare</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Address bit match</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>Exact address compare</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC2ER</name>
+              <description>Instruction Address Compare 2 Effective/Real Mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC2 debug events are based on effective address and can only occur if MSRIS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC2 debug events are based on effective address and can only occur if MSRIS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC2 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC2US</name>
+              <description>Instruction Address Compare 2 User/Supervisor Mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC2 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC2 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC2 debug events not affected by MSRPR</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC1ER</name>
+              <description>Instruction Address Compare 1 Effective/Real Mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC1 debug events are based on effective address and can only occur if MSRIS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC1 debug events are based on effective address and can only occur if MSRIS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>IAC1 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>IAC1US</name>
+              <description>Instruction Address Compare 1 Effective/Real Mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>IAC1 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>IAC1 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>Instruction Address Compare 1 User/Supervisor Mode</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>                                                                                                                                    
+          </fields>                    
+        </register>
+        <register>
+          <name>DBCR2</name>
+          <description>SPR 310</description>
+          <addressOffset>1028</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>DAC2LNK</name>
+              <description>Data Address Compare 2 Linked</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>DAC 2 debug events are linked to IAC3 debug events</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>No effect</description>
+                  <value>#0</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                                                        
+            </field>
+            <field>
+              <name>DAC1LNK</name>
+              <description>Data Address Compare 1 Linked</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>1</name>
+                  <description>DAC1 debug events are linked to IAC1 debug events</description>
+                  <value>#1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <description>No effect</description>
+                  <value>#0</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC12M</name>
+              <description>Data Address Compare 1/2 Mode</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>Exclusive address range compare</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>Inclusive address range compare</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Address bit match</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>Exact address compare</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC2ER</name>
+              <description>Data Address Compare 2 Effective/Real Mode</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC2 debug events are based on effective address and can only occur if MSRDS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC2 debug events are based on effective address and can only occur if MSRDS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC2 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC2US</name>
+              <description>Data Address Compare 2 User/Supervisor Mode</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC2 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC2 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC2 debug events not affected by MSRPR</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC1ER</name>
+              <description>Data Address Compare 1 Effective/Real Mode</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC1 debug events are based on effective address and can only occur if MSRDS=1</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC1 debug events are based on effective address and can only occur if MSRDS=0</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Unimplemented in e200 (Book E real address compare), no match can occur</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC1 debug events are based on effective address</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>
+            <field>
+              <name>DAC1US</name>
+              <description>Data Address Compare 1 User/Supervisor Mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>11</name>
+                  <description>DAC1 debug events can only occur if MSRPR=1 (User mode)</description>
+                  <value>#11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <description>DAC1 debug events can only occur if MSRPR=0 (Supervisor mode)</description>
+                  <value>#10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>01</name>
+                  <description>Reserved</description>
+                  <value>#01</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>00</name>
+                  <description>DAC1 debug events not affected by MSRPR</description>
+                  <value>#00</value>
+                </enumeratedValue>                                                                
+              </enumeratedValues>                            
+            </field>                                                                                                                                    
+          </fields>                                        
+        </register>
+        <register>
+          <name>IAC1</name>
+          <description>SPR 312</description>
+          <addressOffset>1029</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>IAC2</name>
+          <description>SPR 313</description>
+          <addressOffset>1030</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>IAC3</name>
+          <description>SPR 314</description>
+          <addressOffset>1031</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>IAC4</name>
+          <description>SPR 315</description>
+          <addressOffset>1032</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>DAC1</name>
+          <description>SPR 316</description>
+          <addressOffset>1033</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+        <register>
+          <name>DAC2</name>
+          <description>SPR 317</description>
+          <addressOffset>1034</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+        
+  </peripherals>
+</device>
